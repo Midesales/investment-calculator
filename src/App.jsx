@@ -1,6 +1,7 @@
 import UserInput from "./components/userInput"
 import { useState } from "react"
 import Result from "./components/result"
+import logo from '../src/assets/investment-calculator-logo.png'
 function App() {
   const [userInput, setuserInput] = useState({
     initialInvestment: 10000,
@@ -23,7 +24,7 @@ function handleChange(inputIdentifier, newValue) {
   return (
     <div>
       <header id="header">
-        <img src="../src/assets/investment-calculator-logo.png" alt="logo" />
+        <img src={logo} alt="logo" />
         <h1>Investment calculator</h1>
       </header>
       <UserInput onChange={handleChange} userInput={userInput} />
